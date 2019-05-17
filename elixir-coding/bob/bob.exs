@@ -4,7 +4,7 @@ defmodule Bob do
       String.trim(input) == "" ->
         "Fine. Be that way!"
 
-      String.upcase(input) == input and String.ends_with?(input, "?") and !(input =~ ~r/[0-9]+/) ->
+      all_letters_uppercase?(input) and String.ends_with?(input, "?") ->
         "Calm down, I know what I'm doing!"
 
       all_letters_uppercase?(input) ->
